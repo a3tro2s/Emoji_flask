@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guayabob&c</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/social.css') }}">
+
+</head>
+<body>
+<ul>
+    <li> <a href="wa.link/utjjcl" class="btn-flotante">WhatsApp</a></li>
+</ul>
+
+    <img src="https://i.ibb.co/1Xczx6B/Guayabobyc.jpg">
+    <br>
+    <form action="greet" method="post">
+        {% for message in get_flashed_messages() %}
+             <p>{{ message }}</p>
+         {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="Dalee!" id="greet">
+    </form>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{{url_for('static', filename='js/social.js')}}"></script>
+</body>
+</html>
